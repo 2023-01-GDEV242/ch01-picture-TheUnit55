@@ -9,7 +9,7 @@
  * @author  Michael Kšlling and David J. Barnes
  * @version 2016.02.29
  */
-public class Picture
+public class Picture 
 {
     private Square wall;
     private Square window;
@@ -24,7 +24,7 @@ public class Picture
     {
         wall = new Square();
         window = new Square();
-        roof = new Triangle();  
+        roof = new Triangle();
         sun = new Circle();
         drawn = false;
     }
