@@ -12,12 +12,18 @@
 public class Picture 
 {
     private Circle sun;
+    private Circle sun2;
     private Square base1;
     private Square base2;
     private Square base3;
     private Square base4;
     private Square base5;
+    private Square arm1;
+    private Square arm2;
+    private Square arm3;
+    private Square arm4;
     private Triangle corner1;
+    private Triangle corner2;
     private boolean drawn;
     
     
@@ -28,12 +34,18 @@ public class Picture
     public Picture()
     {
         sun = new Circle();
+        sun2 = new Circle();
         base1 = new Square();
         base2 = new Square();
         base3 = new Square();
         base4 = new Square();
         base5 = new Square();
+        arm1 = new Square();
+        arm2 = new Square();
+        arm3 = new Square();
+        arm4 = new Square();
         corner1 = new Triangle();
+        corner2 = new Triangle();
         drawn = false;
     }
 
@@ -43,6 +55,12 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
+            sun2.changeColor("blue");
+            sun2.moveHorizontal(-120);
+            sun2.moveVertical(-50);
+            sun2.changeSize(240);
+            sun2.makeVisible();
+            
             sun.changeColor("magenta");
             sun.moveHorizontal(-90);
             sun.moveVertical(-33);
@@ -78,13 +96,43 @@ public class Picture
             base5.changeSize(40);
             base5.makeVisible();
             base5.changeColor("black");
+            
+            arm1.moveHorizontal(-60);
+            arm1.moveVertical(10);
+            arm1.changeSize(40);
+            arm1.makeVisible();
+            arm1.changeColor("black");
+            
+            arm2.moveHorizontal(-80);
+            arm2.moveVertical(10);
+            arm2.changeSize(40);
+            arm2.makeVisible();
+            arm2.changeColor("black");
+            
+            arm3.moveHorizontal(-120);
+            arm3.moveVertical(10);
+            arm3.changeSize(40);
+            arm3.makeVisible();
+            arm3.changeColor("black");
+            
+            arm4.moveHorizontal(-140);
+            arm4.moveVertical(10);
+            arm4.changeSize(40);
+            arm4.makeVisible();
+            arm4.changeColor("black");
     
-            corner1.changeSize(10, 100);
-            corner1.moveHorizontal(-50);
-            corner1.moveVertical(-70);
+            corner1.changeSize(20, 100);
+            corner1.moveHorizontal(0);
+            corner1.moveVertical(100);
             corner1.makeVisible();
             corner1.changeColor("black");
     
+            corner2.changeSize(20, 100);
+            corner2.moveHorizontal(30);
+            corner2.moveVertical(100);
+            corner2.makeVisible();
+            corner2.changeColor("black");
+            
             drawn = true;
         }
     }
