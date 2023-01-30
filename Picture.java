@@ -24,6 +24,7 @@ public class Picture
     private Square arm4;
     private Triangle corner1;
     private Triangle corner2;
+    private Person man;
     private boolean drawn;
     
     
@@ -46,6 +47,7 @@ public class Picture
         arm4 = new Square();
         corner1 = new Triangle();
         corner2 = new Triangle();
+        man = new Person();
         drawn = false;
     }
 
@@ -133,6 +135,11 @@ public class Picture
             corner2.makeVisible();
             corner2.changeColor("black");
             
+            man.moveHorizontal(-140);
+            man.moveVertical(10);
+            man.makeVisible();
+            man.changeColor("black");
+    
             drawn = true;
         }
     }
